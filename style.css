@@ -1,0 +1,318 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and navigation */
+header {
+    background-color: #243b2d;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h2 {
+    color: #e6bd78;
+    font-family: Georgia, serif;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e6bd78;
+    text-decoration: underline;
+}
+
+/* Sections */
+section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #243b2d;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* Home page hero */
+.hero {
+    min-height: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.58),
+                        rgba(0, 0, 0, 0.58)),
+        url("https://images.unsplash.com/photo-1515003197210-e0cd7184f8b5?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 15px 0;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: #c89b55;
+    color: #202d23;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #e6bd78;
+}
+
+/* Food cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 15px #00000012;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 5px;
+    color: #243b2d;
+}
+
+.card p {
+    padding: 0 12px;
+    color: #666;
+    font-size: 14px;
+}
+
+.card strong {
+    display: block;
+    color: #a36e2b;
+    margin-top: 10px;
+}
+
+/* Restaurant ambience */
+.ambience {
+    background-color: #eae1d2;
+}
+
+.ambience img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Chefs */
+.chef {
+    background-color: white;
+    padding: 30px 15px;
+    border-radius: 8px;
+    border-bottom: 3px solid #c89b55;
+}
+
+.chef h3 {
+    font-family: Georgia, serif;
+    color: #243b2d;
+    font-size: 22px;
+}
+
+.chef p {
+    color: #666;
+}
+
+/* Customer reviews */
+.reviews {
+    background-color: #243b2d;
+    color: white;
+}
+
+.reviews h2 {
+    color: #e6bd78;
+}
+
+.review-box {
+    background-color: #314a39;
+    padding: 22px;
+    border-radius: 8px;
+    margin: 15px auto;
+    max-width: 650px;
+}
+
+.review-box h4 {
+    color: #e6bd78;
+    margin-top: 10px;
+}
+
+/* Contact */
+.contact-box {
+    max-width: 650px;
+    margin: auto;
+    line-height: 2;
+}
+
+.contact-box h3 {
+    color: #a36e2b;
+    margin-top: 20px;
+}
+
+.contact-box .button {
+    margin-top: 20px;
+}
+
+/* Reservation form */
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px #00000012;
+}
+
+form label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    background-color: #fffdf8;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: 2px solid #c89b55;
+    border-color: transparent;
+}
+
+form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    background-color: #243b2d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #3d5b45;
+}
+
+.form-note {
+    font-size: 12px;
+    color: #777;
+    margin-top: 12px;
+}
+
+/* Footer */
+footer {
+    background-color: #19281e;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+/* Mobile responsive design */
+@media (max-width: 650px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px 16px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+```
